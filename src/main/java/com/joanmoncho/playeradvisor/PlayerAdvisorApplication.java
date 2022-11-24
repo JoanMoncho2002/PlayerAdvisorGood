@@ -10,6 +10,7 @@ public class PlayerAdvisorApplication {
         SpringApplication.run(PlayerAdvisorApplication.class, args);
 
         String ejemplo;
+        String ejemplo2;
     }
 
 }
