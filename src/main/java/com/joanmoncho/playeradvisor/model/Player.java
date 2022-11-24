@@ -2,19 +2,19 @@ package com.joanmoncho.playeradvisor.model;
 
 import java.util.List;
 
-public class Jugador {
+public class Player {
 
     private long id;
     private String nombre;
     private String apellido;
     private String posicion;
-    private String nacionalidad;
-    private List<String> liga;
-    private  List<String> equipo;
+    private List<String> nacionalidad;
+    private String liga;
+    private  String equipo;
 
-    public Jugador(){}
+    public Player(){}
 
-    public Jugador(long id, String nombre, String apellido, String posicion, String nacionalidad, List<String> liga, List<String> equipo) {
+    public Player(long id, String nombre, String apellido, String posicion, List<String> nacionalidad, String liga, String equipo) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -40,15 +40,15 @@ public class Jugador {
         return posicion;
     }
 
-    public String getNacionalidad() {
+    public List<String> getNacionalidad() {
         return nacionalidad;
     }
 
-    public List<String> getLiga() {
+    public String getLiga() {
         return liga;
     }
 
-    public List<String> getEquipo() {
+    public String getEquipo() {
         return equipo;
     }
 
