@@ -1,0 +1,11 @@
+id;nombre;apellido;posicion;nacionalidad;liga;equipo
+1;Pedro;Gonzalez;Mediocentro;España;La Liga Santander;Barcelona
+2;Karim;Benzema;Delantero Centro;Francia;La Liga Santander;Madrid
+3;Neymar:da Silva Santos;Extremo Izquierdo;Brasil;Ligue 1;Paris Saint Germain
+4;Thomas;Muller;Mediocentro Ofensivo;Alemania;Bundesliga;Bayern de Munich
+5;Kylian;Mbappe;Delantero Centro;Francia;Ligue 1;Paris Saint Germain
+6;Robert;Lewandowski;Delantero Centro;Polonia;La Liga Santander;Barcelona
+7;Keylor;Navas;Portero;Costa Rica;Ligue 1;Paris Saint Germain
+8;Kevin;De Bruyne;Mediocentro;Belgica;Premier League;Manchester City
+9;Cristiano;Ronaldo;Delantero Centro;Premier League;Manchester United
+10;Lionel;Messi;Extremo Derecho;Argentina;Ligue 1;Paris Saint Germain
