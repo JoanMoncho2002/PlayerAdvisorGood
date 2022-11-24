@@ -8,7 +8,7 @@ public class PlayerAdvisorApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PlayerAdvisorApplication.class, args);
-        System.out.println();
+        System.out.println("hola");
 
 
     }
