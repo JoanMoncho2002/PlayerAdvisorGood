@@ -20,10 +20,8 @@ public class PlayerAdvisorRunApp {
 
     @Autowired
     PlayerService playerService;
-
     @Autowired
     PlayerQueryService playerQueryService;
-
     @Autowired
     PlayerAdvisorHelp help;
 
