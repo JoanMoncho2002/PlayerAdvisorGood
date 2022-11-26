@@ -51,9 +51,6 @@ public class PlayerAdvisorRunApp {
             System.out.println(help.getHelp());
         } else {
 
-            // De esta forma hemos asegurado que el número de argumentos
-            // es par (opción valoropción) y que no hay más de cuatro
-            // parejas (ver fichero de ayuda).
             List<String[]> argumentos = new ArrayList<>();
 
             for (int i = 0; i < args.length; i += 2) {
