@@ -10,7 +10,7 @@
 * liga
 * equipo
 
-3. Aqui muestro el fichero csv que uilizado:
+3. Aqui muestro el fichero csv que uilizado: 
 ```
 id;nombre;apellido;posicion;nacionalidad;liga;equipo
 1;Pedro;Gonzalez;Mediocentro;España;Liga Santander;Barcelona
