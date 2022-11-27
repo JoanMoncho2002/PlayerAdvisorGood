@@ -14,10 +14,8 @@ import org.springframework.stereotype.Component;
 import com.joanmoncho.playeradvisor.service.PlayerQueryService;
 import com.joanmoncho.playeradvisor.service.PlayerService;
 
-
 @Component
 public class PlayerAdvisorRunApp {
-
     @Autowired
     PlayerService playerService;
     @Autowired
@@ -32,7 +30,7 @@ public class PlayerAdvisorRunApp {
             System.out.println(help.getHelp());
         } else if (args.length == 1) {
             switch (args[0].toLowerCase()) {
-                case "-lg":
+                case "-ln":
                     playerService.findAllNationalities().forEach(System.out::println);
                     break;
                 case "-h":
@@ -61,20 +59,19 @@ public class PlayerAdvisorRunApp {
 
             for (String[] argumento : argumentos) {
                 switch (argumento[0].toLowerCase()) {
-                    case "-ag":
+                    case "-an":
                         playerQueryService.anyNationality(argumento[1].split(","));
                         break;
-                    case "-tg":
+                    case "-tn":
                         playerQueryService.allNationalities(argumento[1].split(","));
                         break;
-                    case "-y":
-                        //playerQueryService.year(argumento[1]);
+                    case "-a":
+                        playerQueryService.apellidoContains(argumento[1]);
                         break;
-                    case "-b":
-                        String[] years = argumento[1].split(",");
-                        //playerQueryService.betweenYears(years[0], years[1]);
+                    case "-p":
+                        playerQueryService.posicionContains(argumento[1]);
                         break;
-                    case "-t":
+                    case "-n":
                         playerQueryService.nombreContains(argumento[1]);
                         break;
                     default: error = true;

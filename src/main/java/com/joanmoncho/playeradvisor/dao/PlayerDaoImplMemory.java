@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.joanmoncho.playeradvisor.config.AppConfig;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -17,6 +18,8 @@ public class PlayerDaoImplMemory implements PlayerDao{
     @Autowired
     private AppConfig appConfig;
 
+
+    @PostConstruct
     public void init(){
         players = UtilPlayerFileReader.readFile(appConfig.getFile(), appConfig.getSeparator(), appConfig.getListSeparator());
     }

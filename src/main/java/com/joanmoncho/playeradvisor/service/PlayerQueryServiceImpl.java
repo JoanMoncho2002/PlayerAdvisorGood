@@ -26,11 +26,9 @@ public class PlayerQueryServiceImpl implements PlayerQueryService {
     }
 
     public Collection<Player> exec() {
-
         // @formatter:off
         return dao.findAll().stream().filter(predicate).collect(Collectors.toList());
         // @formatter:on
-
     }
 
     public PlayerQueryServiceImpl anyNationality(String... nationalities) {
@@ -42,6 +40,26 @@ public class PlayerQueryServiceImpl implements PlayerQueryService {
     public PlayerQueryServiceImpl allNationalities(String... nationalities) {
         Predicate<Player> pAllNationalities = (player -> Arrays.stream(nationalities).allMatch(player.getNacionalidad()::contains));
         predicate = (predicate == null) ?pAllNationalities: predicate.and(pAllNationalities);
+        return this;
+    }
+
+    public PlayerQueryServiceImpl nombreContains(String nombre) {
+        Predicate<Player> pNombreContains  = (player -> player.getNombre().toLowerCase().contains(nombre.toLowerCase()));
+        predicate = (predicate == null) ? pNombreContains : predicate.and(pNombreContains);
+        return this;
+    }
+
+    @Override
+    public PlayerQueryService apellidoContains(String apellido) {
+        Predicate<Player> pApellidoContains  = (player -> player.getApellido().toLowerCase().contains(apellido.toLowerCase()));
+        predicate = (predicate == null) ? pApellidoContains : predicate.and(pApellidoContains);
+        return this;
+    }
+
+    @Override
+    public PlayerQueryService posicionContains(String posicion) {
+        Predicate<Player> pPosicionContains  = (player -> player.getPosicion().toLowerCase().contains(posicion.toLowerCase()));
+        predicate = (predicate == null) ? pPosicionContains : predicate.and(pPosicionContains);
         return this;
     }
 
@@ -65,13 +83,6 @@ public class PlayerQueryServiceImpl implements PlayerQueryService {
         return this;
     }
      */
-
-    public PlayerQueryServiceImpl nombreContains(String nombre) {
-        Predicate<Player> pNombreContains  = (player -> player.getNombre().toLowerCase().contains(nombre.toLowerCase()));
-        predicate = (predicate == null) ? pNombreContains : predicate.and(pNombreContains);
-
-        return this;
-    }
 
 
 }

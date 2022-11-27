@@ -33,14 +33,14 @@ public class PlayerService {
         return result;
     }
 
-    public Collection<Player> findByAnyGenre(String... genres) {
+    public Collection<Player> findByAnyNationality(String... nationality) {
 
-        return queryService.anyNationality(genres).exec();
+        return queryService.anyNationality(nationality).exec();
 
     }
 
-    public Collection<Player> findByAllNationalities(String... genres) {
-        return queryService.allNationalities(genres).exec();
+    public Collection<Player> findByAllNationalities(String... nationality) {
+        return queryService.allNationalities(nationality).exec();
     }
 
     /*public Collection<Player> findByYear(String year) {
@@ -52,8 +52,15 @@ public class PlayerService {
     }
      */
 
-    public Collection<Player> findByTitleContains(String nombre) {
+    public Collection<Player> findByNameContains(String nombre) {
         return queryService.nombreContains(nombre).exec();
+    }
+
+    public Collection<Player> findByApellidoContains(String apellido) {
+        return queryService.apellidoContains(apellido).exec();
+    }
+    public Collection<Player> findByPosicionContains(String posicion) {
+        return queryService.posicionContains(posicion).exec();
     }
 
     public Collection<Player> findAll() {
